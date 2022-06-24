@@ -1,0 +1,30 @@
+{
+  "name": "apinode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "migration:generate": "ts-node-dev ./node_modules/typeorm/cli.js migration:create -d ./ormconfig.json",
+    "migration:up": "ts-node-dev ./node_modules/typeorm/cli.js migration:run",
+    "migration:down": "ts-node-dev ./node_modules/typeorm/cli.js migration:revert -d ./ormconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/pg": "^8.6.5",
+    "express": "^4.18.1",
+    "http-status-codes": "^2.2.0",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
